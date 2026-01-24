@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل الحرفة — Craft Egypt</title>
+  <link rel="stylesheet" href=".5.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo">Craft Egypt</a>
+
+      <nav class="main-nav">
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="main-photo">
+          <img id="mainImage" src="img/2222.jfif" alt="حرفة التطريز التقليدي">
+        </div>
+
+        <div class="thumbs" aria-hidden="false">
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <h1 class="item-title">حرفة التطريز التقليدي</h1>
+        <p class="item-short">تطريز يدوي بنقوش محلية وزخارف ملونة للملابس والديكور.</p>
+
+        <ul class="meta-list">
+          <li><span class="meta-key">نوع الحرفة:</span> <span class="meta-val">التطريز التقليدي</span></li>
+          <li><span class="meta-key">اسم الحرفي:</span> <span class="meta-val">عم محمود نول</span></li>
+          <li><span class="meta-key">المحافظة:</span> <span class="meta-val">الصعيد / أسوان</span></li>
+          <li><span class="meta-key">تاريخ التوثيق:</span> <span class="meta-val">2025-04-10</span></li>
+          <li><span class="meta-key">السعر:</span> <span class="meta-val">1500 ج.م</span></li>
+          <li><span class="meta-key">كود المنتج:</span> 
+            <span class="meta-val code" id="prodCode">p-004</span>
+            <button class="copy-btn" onclick="copyCode()">نسخ</button>
+          </li>
+          <li><span class="meta-key">حالة الموافقة:</span> <span class="meta-val approved">تمت الموافقة ✔︎</span></li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn primary" onclick="downloadCert()">تحميل الشهادة</button>
+          <a class="btn ghost" href="#education">المحتوى التعليمي</a>
+        </div>
+
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>الوصف الكامل</h2>
+      <p class="lead">
+      نسج يدوي على النول باستخدام صوف أو قطن، وأنماط تراثية تمثل خصائص كل منطقة. يحتاج العمل إلى ساعات طويلة ومهارة عالية.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h3>معلومات تقنية</h3>
+          <ul>
+            <li>الخامات: صوف / قطن</li>
+            <li>الأبعاد: متغير</li>
+            <li>طريقة التصنيع: نول يدوي، عقد وعقدة</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>قصة القطعة</h3>
+          <p>بدأ الخيط يدخل في القماش بغرزة بسيطة، ومع الوقت ظهرت وردة صغيرة، وبعدها تصميم كامل. شغل التطريز بيحتاج صبر، والقطعة النهائية كانت مزخرفة وجميلة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section media">
+      <div class="media-grid">
+        <div>
+          <h2>فيديو توثيقي</h2>
+          <video controls poster="images/ibrq1.jpg" class="video" preload="metadata">
+            <source src="img/videoplayback.mp4" type="video/mp4">
+            متصفحك لا يدعم عرض الفيديو.
+          </video>
+        </div>
+
+        <div>
+          <h2>صور إضافية</h2>
+          <div class="gallery">
+            <img src="img/222.jfif" alt="">
+            <img src="img/22.jfif" alt="">
+            <img src="img/arabic fonts embroidery.jfif" alt="">
+            <img src="img/Greek Key Embroidery Iron-on Patch.jfif" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>المحتوى التعليمي</h2>
+      <p class="lead">سلسلة فيديوهات ودروس قصيرة تساعد المهتمين على فهم أساسيات الحرفة وتقنيات البدء.</p>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>التعرف على النول وقطع الغزل.</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>عقدة الكليم وتقنيات الربط.</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>تصميم نمط بسيط وقراءة الأشكال.</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section small">
+      <h2>مشاركات وتنزيلات</h2>
+      <div class="tools-row">
+        <button class="btn" onclick="printPage()">طباعة الصفحة</button>
+        <button class="btn" onclick="shareItem()">مشاركة</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Craft Egypt — توثيق الحرف والتراث المصري</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', () => {
+        document.getElementById('mainImage').src = t.dataset.full;
+        document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+      });
+    });
+
+    function copyCode() {
+      const code = document.getElementById('prodCode').innerText;
+      navigator.clipboard?.writeText(code).then(()=>{
+        alert('تم نسخ الكود: ' + code);
+      }).catch(()=>{ alert('نسخ غير متاح'); });
+    }
+
+    function downloadCert(){
+      const cert = {
+        cert_id: 'CERT-' + document.getElementById('prodCode').innerText,
+        product_id: document.getElementById('prodCode').innerText,
+        title: document.querySelector('.item-title').innerText,
+        craft: document.querySelector('.meta-val').innerText || 'نحاس',
+        maker: document.querySelectorAll('.meta-val')[1]?.innerText || '—',
+        issued_at: new Date().toISOString(),
+        issued_by: 'Craft Egypt'
+      };
+      const blob = new Blob([JSON.stringify(cert, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = cert.cert_id + '.json';
+      document.body.appendChild(a); a.click(); a.remove();
+    }
+
+    function printPage(){ window.print(); }
+
+    function shareItem(){
+      const title = document.querySelector('.item-title').innerText;
+      const text = document.querySelector('.item-short').innerText;
+      const url = location.href;
+      if(navigator.share){
+        navigator.share({title,text,url}).catch(()=>{});
+      } else {
+        prompt('انسخ رابط المشاركة:', url);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل الحرفة — Craft Egypt</title>
+  <link rel="icon" type="image/png" href="Blue_and_White_Minimalist_Personal_Logo-removebg-preview.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    
+:root{
+  --bg:#fafafa;
+  --card:#fff;
+  --accent:#c7a880; 
+  --dark:#4B3A2F;
+  --muted:#666;
+  --container:1100px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Cairo",sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
+}
+
+
+.container{
+  width:90%;
+  max-width:var(--container);
+  margin:0 auto
+}
+
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #eee
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0
+}
+
+.logo{
+  font-weight:900;
+  color:var(--dark);
+  text-decoration:none;
+  font-size:20px
+}
+
+.main-nav a{
+  margin-left:18px;
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600
+}
+
+.page{
+  padding:28px 0
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:
+  1fr 420px;
+  gap:28px;
+  align-items:start
+}
+
+@media(max-width:980px){ 
+  .hero{grid-template-columns:1fr; } 
+  .hero-right{order:2}
+  .hero-left{order:1}
+ }
+
+.main-photo{
+  background:var(--card);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08)
+}
+
+.main-photo img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  display:block
+}
+
+.thumbs{
+  display:flex;
+  gap:10px;
+  margin-top:12px
+}
+
+.thumb{
+  width:84px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+  opacity:0.9;
+  border:2px solid transparent
+}
+
+.thumb.active{
+  border-color:var(--accent);
+  opacity:1;
+  transform:scale(1.02)
+}
+
+.hero-right{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.06)
+}
+
+.item-title{
+  font-size:26px;
+  margin:4px 0 6px;
+  font-weight:900
+}
+
+.item-short{
+  color:var(--muted);
+  margin-bottom:14px
+}
+
+.meta-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px;
+  display:grid;
+  gap:8px
+}
+.meta-key{
+  font-weight:700;
+  color:#333;
+  margin-right:8px
+}
+
+.meta-val{
+  color:var(--muted)
+}
+
+.meta-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:8px;
+  background:#fbfbfb
+}
+
+.copy-btn{
+  background:#f3f3f3;
+  border:1px solid #eee;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  margin-inline-start:8px
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:10px
+}
+
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.06);
+  cursor:pointer;
+  background:#fff
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  border:0;
+  font-weight:700
+}
+
+.btn.ghost{
+  background:transparent;
+  border:1px solid var(--accent);
+  color:var(--accent)
+}
+
+.section{
+  margin-top:32px;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04)
+}
+
+.section h2{
+  margin:0 0 12px;
+  font-size:22px;
+  color:var(--dark)
+}
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;gap:20px
+}
+
+@media(max-width:900px){
+   .two-col{grid-template-columns:1fr} 
+}
+
+.media-grid{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:20px
+}
+
+@media(max-width:980px){
+   .media-grid{grid-template-columns:1fr} 
+}
+
+.video{
+  width:100%;
+  border-radius:10px;
+  background:#000
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px
+}
+
+.gallery img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06)
+}
+
+.edu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:12px
+}
+
+.edu-card{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,0.06);
+  display:flex;
+  flex-direction:column
+}
+
+.edu-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover
+}
+
+.edu-body{
+  padding:12px
+}
+
+.edu-link{
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:700;
+  margin-top:10px;
+  display:inline-block
+}
+
+
+.tools-row{
+  display:flex;
+  gap:12px;
+  align-items:center
+}
+
+.small .btn{
+  padding:8px 10px
+}
+
+.site-footer{
+  padding:20px 0;
+  text-align:center;
+  color:var(--muted);
+  margin-top:30px
+}
+
+@media print{
+  .site-header,.actions,.thumbs,.edu-link,.main-nav{display:none}
+  .main-photo img{height:auto}
+}
+
+.text-video-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    max-width: 400px;
+    height: 230px;
+    margin: 25px auto;
+    background: linear-gradient(135deg, #c7a880 0%, #4B3A2F 100%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-video-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #c7a880 0%, #4B3A2F 100%);
+}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="theletter.html">الرجوع لصفحة الحرف</a>
+
+      <nav class="main-nav">
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="main-photo">
+          <img id="mainImage" src="2222.jfif" alt="حرفة التطريز التقليدي">
+        </div>
+
+        <div class="thumbs" aria-hidden="false">
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <h1 class="item-title">حرفة التطريز التقليدي</h1>
+        <p class="item-short">تطريز يدوي بنقوش محلية وزخارف ملونة للملابس والديكور.</p>
+
+        <ul class="meta-list">
+          <li><span class="meta-key">نوع الحرفة:</span> <span class="meta-val">التطريز التقليدي</span></li>
+          <li><span class="meta-key">اسم الحرفي:</span> <span class="meta-val">عم محمود نول</span></li>
+          <li><span class="meta-key">المحافظة:</span> <span class="meta-val">الصعيد / أسوان</span></li>
+          <li><span class="meta-key">تاريخ التوثيق:</span> <span class="meta-val">2025-04-10</span></li>
+          <li><span class="meta-key">السعر:</span> <span class="meta-val">1500 ج.م</span></li>
+          <li><span class="meta-key">كود المنتج:</span> 
+            <span class="meta-val code" id="prodCode">p-004</span>
+            <button class="copy-btn" onclick="copyCode()">نسخ</button>
+          </li>
+          <li><span class="meta-key">حالة الموافقة:</span> <span class="meta-val approved">تمت الموافقة ✔︎</span></li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn primary" onclick="downloadCert()">تحميل الشهادة</button>
+          <a class="btn ghost" href="#education">المحتوى التعليمي</a>
+        </div>
+
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>الوصف الكامل</h2>
+      <p class="lead">
+      نسج يدوي على النول باستخدام صوف أو قطن، وأنماط تراثية تمثل خصائص كل منطقة. يحتاج العمل إلى ساعات طويلة ومهارة عالية.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h3>معلومات تقنية</h3>
+          <ul>
+            <li>الخامات: صوف / قطن</li>
+            <li>الأبعاد: متغير</li>
+            <li>طريقة التصنيع: نول يدوي، عقد وعقدة</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>قصة القطعة</h3>
+          <p>بدأ الخيط يدخل في القماش بغرزة بسيطة، ومع الوقت ظهرت وردة صغيرة، وبعدها تصميم كامل. شغل التطريز بيحتاج صبر، والقطعة النهائية كانت مزخرفة وجميلة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section media">
+      <div class="media-grid">
+        <div>
+          <h2>فيديو توثيقي</h2>
+          <a href="https://drive.google.com/file/d/14lUzEr10nlHU4nhSklHFga--prphQIjc/view?usp=sharing" target="_blank" class="text-video-box"> شاهد الفيلم الوثائقي</a>
+        </div>
+
+        <div>
+          <h2>صور إضافية</h2>
+          <div class="gallery">
+            <img src="222.jfif" alt="">
+            <img src="22.jfif" alt="">
+            <img src="arabic fonts embroidery.jfif" alt="">
+            <img src="Greek Key Embroidery Iron-on Patch.jfif" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>المحتوى التعليمي</h2>
+      <p class="lead">سلسلة فيديوهات ودروس قصيرة تساعد المهتمين على فهم أساسيات الحرفة وتقنيات البدء.</p>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>التعرف على النول وقطع الغزل.</h3>
+            <a class="edu-link">ابحث عنها</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>عقدة الكليم وتقنيات الربط.</h3>
+            <a class="edu-link">ابحث عنها</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>تصميم نمط بسيط وقراءة الأشكال.</h3>
+            <a class="edu-link">ابحث عنها</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section small">
+      <h2>مشاركات وتنزيلات</h2>
+      <div class="tools-row">
+        <button class="btn" onclick="printPage()">طباعة الصفحة</button>
+        <button class="btn" onclick="shareItem()">مشاركة</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Craft Egypt — توثيق الحرف والتراث المصري</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', () => {
+        document.getElementById('mainImage').src = t.dataset.full;
+        document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+      });
+    });
+
+    function copyCode() {
+      const code = document.getElementById('prodCode').innerText;
+      navigator.clipboard?.writeText(code).then(()=>{
+        alert('تم نسخ الكود: ' + code);
+      }).catch(()=>{ alert('نسخ غير متاح'); });
+    }
+
+    function downloadCert(){
+      const cert = {
+        cert_id: 'CERT-' + document.getElementById('prodCode').innerText,
+        product_id: document.getElementById('prodCode').innerText,
+        title: document.querySelector('.item-title').innerText,
+        craft: document.querySelector('.meta-val').innerText || 'نحاس',
+        maker: document.querySelectorAll('.meta-val')[1]?.innerText || '—',
+        issued_at: new Date().toISOString(),
+        issued_by: 'Craft Egypt'
+      };
+      const blob = new Blob([JSON.stringify(cert, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = cert.cert_id + '.json';
+      document.body.appendChild(a); a.click(); a.remove();
+    }
+
+    function printPage(){ window.print(); }
+
+    function shareItem(){
+      const title = document.querySelector('.item-title').innerText;
+      const text = document.querySelector('.item-short').innerText;
+      const url = location.href;
+      if(navigator.share){
+        navigator.share({title,text,url}).catch(()=>{});
+      } else {
+        prompt('انسخ رابط المشاركة:', url);
+      }
+    }
+  </script>
+
+</body>
+</html>
