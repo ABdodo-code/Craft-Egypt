@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('pngtree-egyptian-hieroglyphics-on-a-temple-wall-famous-hieroglyph-landmark-photo-image_31578952.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 30px 28px; 
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.login-box h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 26px;
+    color: #4B3A2F;
+}
+
+.subtitle {
+    margin: 6px 0 22px;
+    color: #7b6a58;
+    font-size: 15px;
+}
+
+.input-group {
+    text-align: right;
+    margin-bottom: 15px; 
+    align-items: right;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #4B3A2F;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.input-group input {
+    width: 93%;
+    padding: 11px 12px;
+    border: 1.6px solid #c7a880;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.25s;
+}
+
+.input-group input:focus {
+    border-color: #b8936c;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+    background: #c7a880;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.login-btn:hover {
+    background: #b8936c;
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+.register-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4B3A2F;
+}
+
+.register-text a {
+    color: #8b6234;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #4B3A2F;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.home-btn:hover {
+    background: #b8936c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}

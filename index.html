@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRE</title>
+    <link rel="icon" type="image/png" href="Blue_and_White_Minimalist_Personal_Logo-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo-pro"><img src="Blue_and_White_Minimalist_Personal_Logo-removebg-preview.png" alt="Logo"></div>
+        <nav>
+           <a href="#home">الصفحة الرئيسية</a>
+           <a href="theletter.html">الحرف</a>
+           <a href="store-1.html">المتجر</a>
+           <a href="about.html">معلومات عنا</a>
+           <a href="support.html">الدعم</a>
+           
+
+        <div id="login-area">
+           <a href="profile.html" class="login-btn">تسجيل الدخول</a>
+        </div>
+        </nav>
+    </header>
+
+
+    
+    <section id="home">
+        <h1>Craft Egypt</h1>
+        <h2>"هنا تبدأ الحكاية… من قلب التراث المصري إلى مستقبل جديد يصنعه إبداع أهل الحرف."
+        </h2>
+        <p>Craft Egypt هي أول منصة مصرية بتجمع الحرف اليدوية والتراثية في مكان واحد، وبتوصل إبداع الحرفيين لكل بيت. اطلب منتجك التراثي من صناعته الأصلية، وتعرّف على قصصهم، وادعم مهارتهم – وكل ده مع تجربة حديثة وسهلة. حوّل شغفك بالتراث لخطوة بتحافظ على هويتنا المصرية. ابدأ رحلتك الآن.
+
+استكشف حرف مصر</p>
+         
+        <a href="#services" class="boton-elegante">استكشف</a>
+
+    </section>
+    
+
+
+<section id="services" class="services-section">
+    <h2 class="sec-title">ماذا نقدم لكم؟</h2>
+    <div class="services-grid">
+        <div class="service-box fade-up">
+            <img src="img/icons/craft.png" alt="">
+            <h3>استكشاف الحرف</h3>
+            <p>اكتشف أصول كل حرفة وقصتها وتفاصيلها الثقافية في مصر.</p>
+        </div>
+
+        <div class="service-box fade-up">
+            <img src="img/icons/store.png" alt="">
+            <h3>متجر المنتجات</h3>
+            <p>شراء منتجات أصلية مباشرة من الحرفيين المصريين.</p>
+        </div>
+
+        <div class="service-box fade-up">
+            <img src="img/icons/video.png" alt="">
+            <h3>محتوى تعليمي</h3>
+            <p>شاهد فيديوهات تعليمية تساعدك تفهم تاريخ وتقنيات الحرف.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="craft-preview" class="craft-preview">
+    <h2 class="sec-title">أشهر الحرف التراثية</h2>
+    <div class="craft-scroll">
+        <a href="theletter.html" class="craft-item slide-in">الفخار</a>
+        <a href="theletter.html" class="craft-item slide-in">الخيامية</a>
+        <a href="theletter.html" class="craft-item slide-in">النحاس</a>
+        <a href="theletter.html" class="craft-item slide-in">الخشب</a>
+        <a href="theletter.html" class="craft-item slide-in">السجاد اليدوي</a>
+    </div>
+</section>
+
+
+<section class="vision-section">
+    <h2 class="sec-title">رؤيتنا</h2>
+    <p class="vision-text zoom-in">
+        رؤيتنا هي دمج التراث المصري الأصيل مع التكنولوجيا الحديثة عن طريق منصة تجمع بين
+        التعليم، التوثيق، والتجارة الإلكترونية. هدفنا هو دعم الحرفيين ونشر هويتنا المصرية بكل
+        أشكالها بطريقة عصرية تلائم جيل اليوم.
+    </p>
+</section>
+
+
+     <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Craft Egypt. All Rights Reserved.</p>
+            
+        </div>
+    </footer>
+    
+
+      <script>
+    let isLogged = localStorage.getItem("loggedIn");
+    let userName = localStorage.getItem("userName");
+
+    if (isLogged === "true") {
+        document.getElementById("login-area").innerHTML = `
+            <span class="welcome">مرحباً، ${userName}</span>
+            <button class="logout-btn" onclick="logout()">تسجيل الخروج</button>
+        `;
+    }
+</script>
+
+<script>
+function logout() {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userName");
+    window.location.reload();
+}
+</script>
+
+
+
+</body>
+</html>

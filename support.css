@@ -1,0 +1,131 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: url('pngtree-egyptian-hieroglyphics-on-a-temple-wall-famous-hieroglyph-landmark-photo-image_31578952.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    direction: rtl; 
+    text-align: right;
+}
+
+.home-button {
+    position: fixed; 
+    bottom: 20px;    
+    left: 20px;      
+    background-color: #4B3A2F; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 990; 
+    direction: rtl; 
+}
+
+.home-button:hover {
+    background-color: #ffca67; 
+    transform: scale(1.05); 
+} 
+
+.support-container {
+    width: 100%;
+    max-width: 500px; 
+}
+
+.support-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border-top: 5px solid #4B3A2F; 
+}
+
+.support-card h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.support-card p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #444;
+    font-size: 14px;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+    font-size: 15px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5A4632; 
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 200, 20, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #5A4632; 
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #d69d58; 
+    transform: translateY(-1px);
+}
+
+
+.success-alert {
+    position: fixed; 
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%;
+    max-width: 550px;
+    background-color: #4B3A2F; 
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    font-weight: 700;
+    transition: top 0.5s ease-in-out; 
+    z-index: 1000; 
+}
